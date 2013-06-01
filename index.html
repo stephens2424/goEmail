@@ -1,16 +1,11 @@
-<!--
-	Copyright 2009 The Go Authors. All rights reserved.
-	Use of this source code is governed by a BSD-style
-	license that can be found in the LICENSE file.
--->
-<!--
-	Note: Static (i.e., not template-generated) href and id
-	attributes start with "pkg-" to make it impossible for
-	them to conflict with generated attributes (some of which
-	correspond to Go identifiers).
--->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="page">
+      <div class="container">
 
-	
 		<div id="short-nav">
 			<dl>
 			<dd><code>import "github.com/stephens2424/goEmail"</code></dd>
@@ -18,9 +13,9 @@
 			<dl>
 			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
 			<dd><a href="#pkg-index">Index</a></dd>
-			
-			
-			
+
+
+
 			</dl>
 		</div>
 		<!-- The package's Name is printed as title by the top-level template -->
@@ -37,83 +32,83 @@ formatted emails.
 
 			</div>
 		</div>
-		
-	
+
+
 		<h2 id="pkg-index">Index</h2>
 		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
 		<div id="manual-nav">
 			<dl>
-			
-			
-			
-				
+
+
+
+
 				<dd><a href="#FormatMailbox">func FormatMailbox(address, name string) string</a></dd>
-			
-			
-				
+
+
+
 				<dd><a href="#Email">type Email</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#NewEmail">func NewEmail() *Email</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#NewEmailWithEncoder">func NewEmailWithEncoder(enc TransferEncoder) *Email</a></dd>
-				
-				
-					
+
+
+
 					<dd>&nbsp; &nbsp; <a href="#Email.AddBcc">func (email *Email) AddBcc(mailbox string)</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#Email.AddBody">func (email *Email) AddBody(mimeType, body string)</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#Email.AddCc">func (email *Email) AddCc(mailbox string)</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#Email.AddHtmlBody">func (email *Email) AddHtmlBody(body string)</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#Email.AddRecipient">func (email *Email) AddRecipient(mailbox string)</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#Email.AddTextBody">func (email *Email) AddTextBody(body string)</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#Email.Format">func (email *Email) Format() []byte</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#Email.MessageID">func (e *Email) MessageID() string</a></dd>
-				
-					
+
+
 					<dd>&nbsp; &nbsp; <a href="#Email.Send">func (email *Email) Send(addr string, a smtp.Auth) error</a></dd>
-				
-			
-				
+
+
+
 				<dd><a href="#TransferEncoder">type TransferEncoder</a></dd>
-				
-				
-			
-			
+
+
+
+
 		</dl>
 
-		
 
-		
+
+
 			<h4>Package files</h4>
 			<p>
 			<span style="font-size:90%">
-			
+
 				<a href="/target/goEmail.go">goEmail.go</a>
-			
+
 			</span>
 			</p>
-		
-	
-		
-		
-		
-			
-			
+
+
+
+
+
+
+
 			<h2 id="FormatMailbox">func <a href="/target/goEmail.go?s=1102:1149#L34">FormatMailbox</a></h2>
 			<pre>func FormatMailbox(address, name string) string</pre>
 			<p>
@@ -121,11 +116,11 @@ FormatMailbox accepts an email address and a name and formats
 a mailbox entry useful in email headers.
 </p>
 
-			
-		
-		
-			
-			
+
+
+
+
+
 			<h2 id="Email">type <a href="/target/goEmail.go?s=278:403#L6">Email</a></h2>
 			<pre>type Email struct {
     To, Cc, Bcc   []string
@@ -137,94 +132,94 @@ Email is the basic data type of the goEmail package.
 </p>
 
 
-			
 
-			
 
-			
 
-			
-				
+
+
+
+
+
 				<h3 id="NewEmail">func <a href="/target/goEmail.go?s=482:504#L14">NewEmail</a></h3>
 				<pre>func NewEmail() *Email</pre>
 				<p>
 Creates a new email with the default transfer encoder (quoted printable).
 </p>
 
-				
-			
-				
+
+
+
 				<h3 id="NewEmailWithEncoder">func <a href="/target/goEmail.go?s=638:690#L20">NewEmailWithEncoder</a></h3>
 				<pre>func NewEmailWithEncoder(enc TransferEncoder) *Email</pre>
 				<p>
 Creates a new email with a specified transfer encoder.
 </p>
 
-				
-			
 
-			
-				
+
+
+
+
 				<h3 id="Email.AddBcc">func (*Email) <a href="/target/goEmail.go?s=1511:1553#L52">AddBcc</a></h3>
 				<pre>func (email *Email) AddBcc(mailbox string)</pre>
 				<p>
 Adds a bcc recipient to the email
 </p>
 
-				
-				
-			
-				
+
+
+
+
 				<h3 id="Email.AddBody">func (*Email) <a href="/target/goEmail.go?s=1697:1747#L61">AddBody</a></h3>
 				<pre>func (email *Email) AddBody(mimeType, body string)</pre>
 				<p>
 Add a body of any mimetype to the email.
 </p>
 
-				
-				
-			
-				
+
+
+
+
 				<h3 id="Email.AddCc">func (*Email) <a href="/target/goEmail.go?s=1389:1430#L47">AddCc</a></h3>
 				<pre>func (email *Email) AddCc(mailbox string)</pre>
 				<p>
 Adds a cc recipient to the email
 </p>
 
-				
-				
-			
-				
+
+
+
+
 				<h3 id="Email.AddHtmlBody">func (*Email) <a href="/target/goEmail.go?s=1887:1931#L66">AddHtmlBody</a></h3>
 				<pre>func (email *Email) AddHtmlBody(body string)</pre>
 				<p>
 Adds an HTML body to the email, using the utf-8 charset.
 </p>
 
-				
-				
-			
-				
+
+
+
+
 				<h3 id="Email.AddRecipient">func (*Email) <a href="/target/goEmail.go?s=1261:1309#L42">AddRecipient</a></h3>
 				<pre>func (email *Email) AddRecipient(mailbox string)</pre>
 				<p>
 Adds a recipient to the email
 </p>
 
-				
-				
-			
-				
+
+
+
+
 				<h3 id="Email.AddTextBody">func (*Email) <a href="/target/goEmail.go?s=2050:2094#L71">AddTextBody</a></h3>
 				<pre>func (email *Email) AddTextBody(body string)</pre>
 				<p>
 Adds a plaintext body to the email, using the utf-8 charset.
 </p>
 
-				
-				
-			
-				
+
+
+
+
 				<h3 id="Email.Format">func (*Email) <a href="/target/goEmail.go?s=4443:4478#L145">Format</a></h3>
 				<pre>func (email *Email) Format() []byte</pre>
 				<p>
@@ -232,10 +227,10 @@ Formats an email for sending, per RFC 5322. This implementation uses the
 quoted-printable wire encoding for body segments.
 </p>
 
-				
-				
-			
-				
+
+
+
+
 				<h3 id="Email.MessageID">func (*Email) <a href="/target/goEmail.go?s=2295:2329#L77">MessageID</a></h3>
 				<pre>func (e *Email) MessageID() string</pre>
 				<p>
@@ -243,22 +238,22 @@ MessageID constructs the message ID of an email. This implementation
 defines the message ID as the sha1 digest of the entire email object.
 </p>
 
-				
-				
-			
-				
+
+
+
+
 				<h3 id="Email.Send">func (*Email) <a href="/target/goEmail.go?s=5248:5304#L168">Send</a></h3>
 				<pre>func (email *Email) Send(addr string, a smtp.Auth) error</pre>
 				<p>
 Send the formatted email using the specified server and authentication.
 </p>
 
-				
-				
-			
-		
-			
-			
+
+
+
+
+
+
 			<h2 id="TransferEncoder">type <a href="/target/goEmail.go?s=899:991#L27">TransferEncoder</a></h2>
 			<pre>type TransferEncoder interface {
     Encode(src []byte) []byte
@@ -271,24 +266,28 @@ bit of wrapping, base64.
 </p>
 
 
-			
 
-			
 
-			
 
-			
 
-			
-		
+
+
+
+
+
+
 		</div>
-	
-
-	
 
 
 
 
 
+
+
+
+  </div>
+</div>
+</body>
+</html>
 
 
